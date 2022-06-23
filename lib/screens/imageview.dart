@@ -10,7 +10,7 @@ class ImageView extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Image Viewww',style: GoogleFonts.aBeeZee(),),
+        title: Text('Image Vieww',style: GoogleFonts.aBeeZee(),),
         centerTitle: true,
 
       ),

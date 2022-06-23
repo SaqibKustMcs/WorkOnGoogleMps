@@ -2,6 +2,8 @@ import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 import 'package:ui295/components/helper.dart';
 import 'package:ui295/screens/add_belogs.dart';
+import 'package:ui295/screens/display_products.dart';
+import 'package:ui295/screens/firebase_products.dart';
 import 'package:ui295/screens/google_map.dart';
 import 'package:ui295/screens/homescreen.dart';
 
@@ -23,7 +25,7 @@ class _CartScreenState extends State<CartScreen> {
   Widget build(BuildContext context) {
     CollectionReference user=FirebaseFirestore.instance.collection('users');
     return DefaultTabController(
-      length: 3,
+      length: 4,
       child: Scaffold(
         appBar: AppBar(
           title: Text('Cart Screen'),
@@ -31,7 +33,8 @@ class _CartScreenState extends State<CartScreen> {
             tabs: [
               Tab( text: "first",)
               ,Tab(text: "second",),
-              Tab(text: "third",)
+              Tab(text: "third",),
+              Tab(text: "fourth",)
             ],
           ),
           actions: [
@@ -63,7 +66,10 @@ class _CartScreenState extends State<CartScreen> {
           children: [
             AddBlogs(),
             HomeScreen(),
-            GoogleMAp()
+            GoogleMAp(),
+            DisplayProducts(),
+
+
 
           ],
         ),
